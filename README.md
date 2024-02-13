@@ -10,7 +10,7 @@ To demonstrate how the code works, here's an example:
 ./qrt wp.png
 ```
 
-![QR Code Result](path/to/screenshot.png)
+![QR Code Result](screenshot.png)
 
 ## Apple Shortcut for Enhanced Functionality
 For enhanced functionality and quicker access, I've created an Apple Shortcut. You can find the shortcut [here](link_to_shortcut). 

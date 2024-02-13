@@ -13,7 +13,7 @@ To demonstrate how the code works, here's an example:
 ![QR Code Result](screenshot.png)
 
 ## Apple Shortcut for Enhanced Functionality
-For enhanced functionality and quicker access, I've created an Apple Shortcut. You can find the shortcut [here](link_to_shortcut). 
+For enhanced functionality and quicker access, I've created an Apple Shortcut. You can find the shortcut [here](https://www.icloud.com/shortcuts/935b14647634407aafa36fcc081d08fa). 
 
 ### How it Works
 This Apple Shortcut simplifies the process of scanning and downloading files using QR codes. It leverages the utility provided by this code to quickly scan QR codes and initiate download instead of having to visit the link embedded in the QR Code.

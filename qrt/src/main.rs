@@ -39,14 +39,13 @@ fn file_to_vec8(mut file: File) -> Vec<u8> {
 }
 
 fn read_file(path: &std::path::PathBuf) -> File {
-    let file = match File::open(path) {
+    match File::open(path) {
         Ok(file) => file,
         Err(err) => {
             eprintln!("Could Not Open File: {}", err);
             std::process::exit(1);
         }
-    };
-    file
+    }
 }
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {

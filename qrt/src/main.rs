@@ -72,6 +72,5 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let file_url = send_request(buffer, host_url);
 
     generate_qr_code(file_url);
-    println!("{}", file_url);
     Ok(())
 }

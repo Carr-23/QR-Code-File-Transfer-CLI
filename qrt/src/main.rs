@@ -1,4 +1,5 @@
 use clap::Parser;
+use qrcode::QrCode;
 use reqwest::header::{HeaderMap, HeaderValue};
 use std::fs::File;
 use std::io::Read;
@@ -24,6 +25,17 @@ fn send_request(buffer: Vec<u8>, url: String) -> String {
         .unwrap();
 
     response.text().unwrap()
+}
+
+fn generate_qr_code(url: String) {
+    let code = QrCode::new(url).unwrap();
+    let printable_qr_code = code
+        .render()
+        .light_color(' ')
+        .dark_color('█')
+        .module_dimensions(2, 1)
+        .build();
+    println!("{}", printable_qr_code);
 }
 
 fn file_to_vec8(mut file: File) -> Vec<u8> {
@@ -59,7 +71,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let file_url = send_request(buffer, host_url);
 
-    println!("URL: {:?}", file_url);
+    println!("{}", file_url);
+    generate_qr_code(file_url);
 
     Ok(())
 }
